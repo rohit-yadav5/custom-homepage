@@ -53,56 +53,6 @@ section {
   margin-bottom: 30px;
 }
 
-/* Input & button */
-#taskInput {
-  width: 75%;
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-}
-
-button {
-  padding: 12px 20px;
-  font-size: 16px;
-  background-color: #1a73e8;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-left: 10px;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background-color: #155ab6;
-}
-
-/* To-do list */
-#taskList {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 15px;
-}
-
-#taskList li {
-  padding: 10px 15px;
-  background: #f7f9fc;
-  margin-bottom: 8px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-#taskList li:hover {
-  background: #e8f0fe;
-}
-
-#taskList li.done {
-  text-decoration: line-through;
-  color: gray;
-}
-
 /* Favorite links */
 section ul {
   list-style: none;
