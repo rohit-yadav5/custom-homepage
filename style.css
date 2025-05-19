@@ -1,32 +1,133 @@
+/* Base styles */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f4f4f4;
   margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
   padding: 20px;
 }
 
 .container {
-  max-width: 700px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  max-width: 800px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+/* Greeting & time */
+#greeting {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+#time {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Section titles */
+section h2 {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #1a73e8;
+}
+
+/* Notes */
 textarea {
   width: 100%;
   height: 100px;
-  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
 }
 
+/* To-do input */
 #taskInput {
-  width: 80%;
-  padding: 5px;
+  width: 75%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
 button {
-  padding: 6px 12px;
-  margin-left: 5px;
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #155ab6;
+}
+
+/* To-do list */
+#taskList {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+#taskList li {
+  padding: 10px;
+  background: #f7f9fc;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#taskList li:hover {
+  background: #e8f0fe;
+}
+
+#taskList li.done {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Links */
+section ul {
+  padding-left: 20px;
+}
+
+section ul li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  #taskInput {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
 }
