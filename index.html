@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Custom Homepage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 id="greeting">Hello!</h1>
+    <p id="time"></p>
+
+    <section>
+      <h2>📝 Quick Notes</h2>
+      <textarea id="notes" placeholder="Write something..."></textarea>
+    </section>
+
+    <section>
+      <h2>✅ To-Do List</h2>
+      <input id="taskInput" type="text" placeholder="Add a task" />
+      <button onclick="addTask()">Add</button>
+      <ul id="taskList"></ul>
+    </section>
+
+    <section>
+      <h2>🌐 Favorite Links</h2>
+      <ul>
+        <li><a href="https://www.google.com" target="_blank">Google</a></li>
+        <li><a href="https://github.com/rohit-yadav5" target="_blank">GitHub</a></li>
+        <li><a href="https://rohit-yadav5.github.io" target="_blank">My Portfolio</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
