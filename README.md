@@ -5,7 +5,7 @@ It helps you stay organized every day with a live clock, notes, to-do list, and 
 
 ---
 
-Visit at [here][https://rohit-yadav5.github.io/custom-homepage/]
+Visit at [here](https://rohit-yadav5.github.io/custom-homepage/)
 
 ## ✨ Features
 
