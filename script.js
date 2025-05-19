@@ -44,3 +44,19 @@ function fetchWeather() {
 }
 
 fetchWeather();
+// Grid toggle
+const toggleBtn = document.getElementById("toggleGrid");
+let gridVisible = false;
+let gridOverlay = null;
+
+toggleBtn.addEventListener("click", () => {
+  if (!gridVisible) {
+    gridOverlay = document.createElement("div");
+    gridOverlay.className = "grid";
+    document.body.appendChild(gridOverlay);
+    gridVisible = true;
+  } else {
+    document.body.removeChild(gridOverlay);
+    gridVisible = false;
+  }
+});
