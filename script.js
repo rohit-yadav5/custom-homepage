@@ -16,10 +16,10 @@ function updateTime() {
 setInterval(updateTime, 1000);
 updateTime();
 
-// Weather Info for IMT Manesar
+// Weather Info for Gurugram
 function fetchWeather() {
-  const lat = 28.3572;
-  const lon = 76.9366;
+  const lat = 28.4595;   // ✅ Gurgaon coordinates
+  const lon = 77.0266;
   const apiKey = "7a161c3e6c6026b07cb2fda228c9fd1f";
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
@@ -32,8 +32,8 @@ function fetchWeather() {
     })
     .then(data => {
       const temp = data.main.temp.toFixed(1);
-      const city = data.name;
       const desc = data.weather[0].description;
+      const city = "Gurugram"; // ✅ Manually display city
       document.getElementById("weather").textContent =
         `🌡️ ${temp}°C in ${city} – ${desc}`;
     })
