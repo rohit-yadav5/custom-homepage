@@ -16,9 +16,11 @@ function updateTime() {
 setInterval(updateTime, 1000);
 updateTime();
 
-// Weather Info
-function fetchWeather(lat, lon) {
-  const apiKey = "7a161c3e6c6026b07cb2fda228c9fd1f"; // ✅ Your new API key
+// Weather Info for IMT Manesar
+function fetchWeather() {
+  const lat = 28.3572;
+  const lon = 76.9366;
+  const apiKey = "7a161c3e6c6026b07cb2fda228c9fd1f";
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
   fetch(url)
@@ -29,7 +31,6 @@ function fetchWeather(lat, lon) {
       return response.json();
     })
     .then(data => {
-      console.log("Weather data:", data); // 🔍 Debugging
       const temp = data.main.temp.toFixed(1);
       const city = data.name;
       const desc = data.weather[0].description;
@@ -42,16 +43,4 @@ function fetchWeather(lat, lon) {
     });
 }
 
-// Get user's location
-if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(
-    (position) => {
-      fetchWeather(position.coords.latitude, position.coords.longitude);
-    },
-    () => {
-      document.getElementById("weather").textContent = "Location access denied.";
-    }
-  );
-} else {
-  document.getElementById("weather").textContent = "Geolocation not supported.";
-}
+fetchWeather();
