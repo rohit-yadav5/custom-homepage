@@ -1,4 +1,4 @@
-/* Base reset */
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-family: 'Inter', sans-serif;
   background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #333;
   display: flex;
@@ -17,7 +17,7 @@ body {
 
 /* Main container */
 .container {
-  background: #ffffff;
+  background: #fff;
   max-width: 800px;
   width: 100%;
   padding: 40px;
@@ -25,7 +25,7 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Greeting and time */
+/* Greeting & time */
 #greeting {
   font-size: 32px;
   font-weight: 600;
@@ -39,7 +39,7 @@ body {
   margin-bottom: 25px;
 }
 
-/* Section title with emoji/icons */
+/* Section titles with icons */
 section h2 {
   display: flex;
   align-items: center;
@@ -53,7 +53,7 @@ section {
   margin-bottom: 30px;
 }
 
-/* To-do Input + Button */
+/* Input & button */
 #taskInput {
   width: 75%;
   padding: 12px;
@@ -78,7 +78,7 @@ button:hover {
   background-color: #155ab6;
 }
 
-/* To-do list items */
+/* To-do list */
 #taskList {
   list-style: none;
   padding-left: 0;
@@ -103,26 +103,20 @@ button:hover {
   color: gray;
 }
 
-/* Favorite links with icons */
+/* Favorite links */
 section ul {
   list-style: none;
   padding-left: 0;
 }
 
 section ul li {
-  margin-bottom: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 16px;
+  margin-bottom: 10px;
 }
 
-section ul li::before {
-  content: "🌐";
-  font-size: 18px;
-}
-
-/* Anchor styles */
 a {
   color: #1a73e8;
   text-decoration: none;
@@ -131,5 +125,3 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
-/* Desktop-only: No mobile styles */

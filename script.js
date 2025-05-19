@@ -1,42 +1,28 @@
-// Greeting and Time
-function updateTime() {
+// Greeting based on time
+function updateGreeting() {
   const now = new Date();
   const hour = now.getHours();
-  const greeting = document.getElementById("greeting");
-  const timeDisplay = document.getElementById("time");
+  const greeting = document.getElementById('greeting');
 
-  // Greeting
-  let message = "Hello";
-  if (hour < 12) message = "Good Morning, Rohit!";
-  else if (hour < 18) message = "Good Afternoon, Rohit!";
-  else message = "Good Evening, Rohit!";
-  greeting.textContent = message;
+  if (hour < 12) greeting.textContent = "Good Morning, Rohit!";
+  else if (hour < 18) greeting.textContent = "Good Afternoon, Rohit!";
+  else greeting.textContent = "Good Evening, Rohit!";
 
-  // Time
-  timeDisplay.textContent = now.toLocaleTimeString();
+  document.getElementById("time").textContent = now.toLocaleTimeString();
 }
-setInterval(updateTime, 1000);
-updateTime();
 
-// Notes Save
-const notes = document.getElementById("notes");
-notes.value = localStorage.getItem("quickNotes") || "";
-notes.addEventListener("input", () => {
-  localStorage.setItem("quickNotes", notes.value);
-});
+setInterval(updateGreeting, 1000);
 
-// To-Do List
+// To-do list
 function addTask() {
-  const input = document.getElementById("taskInput");
-  const taskList = document.getElementById("taskList");
+  const input = document.getElementById('taskInput');
+  const task = input.value.trim();
+  if (task === '') return;
 
-  if (input.value.trim() === "") return;
+  const li = document.createElement('li');
+  li.textContent = task;
+  li.onclick = () => li.classList.toggle('done');
 
-  const li = document.createElement("li");
-  li.textContent = input.value;
-
-  li.onclick = () => li.classList.toggle("done");
-  taskList.appendChild(li);
-
-  input.value = "";
+  document.getElementById('taskList').appendChild(li);
+  input.value = '';
 }
