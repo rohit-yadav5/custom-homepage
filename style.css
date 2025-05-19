@@ -1,40 +1,12 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f4f4f4;
+/* Base reset */
+* {
+  box-sizing: border-box;
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
 
-.container {
-  max-width: 700px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-textarea {
-  width: 100%;
-  height: 100px;
-  margin-top: 10px;
-}
-
-#taskInput {
-  width: 80%;
-  padding: 5px;
-}
-
-button {
-  padding: 6px 12px;
-  margin-left: 5px;
-  cursor: pointer;
-}
-
-/* Base styles */
 body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
   background: #f0f2f5;
   color: #333;
   display: flex;
@@ -42,6 +14,7 @@ body {
   padding: 20px;
 }
 
+/* Main container */
 .container {
   background: #ffffff;
   max-width: 800px;
@@ -49,56 +22,69 @@ body {
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-/* Greeting & time */
+/* Greeting and time */
 #greeting {
   font-size: 28px;
   font-weight: 600;
   color: #2c3e50;
+  margin-bottom: 10px;
 }
 
 #time {
   font-size: 18px;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-/* Section titles */
+/* Section title with emojis */
 section h2 {
-  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 20px;
   color: #1a73e8;
+  margin-bottom: 10px;
 }
 
-/* Notes */
+/* Space between sections */
+section {
+  margin-bottom: 30px;
+}
+
+/* Notes area */
 textarea {
   width: 100%;
   height: 100px;
-  padding: 10px;
+  padding: 12px;
   border-radius: 10px;
   border: 1px solid #ccc;
   font-size: 16px;
   resize: none;
+  background-color: #fafafa;
 }
 
-/* To-do input */
+/* Task input and button */
 #taskInput {
   width: 75%;
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 10px;
 }
 
 button {
-  padding: 10px 16px;
+  padding: 12px 20px;
   font-size: 16px;
   background-color: #1a73e8;
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  margin-left: 10px;
   transition: background 0.3s;
 }
 
@@ -106,7 +92,7 @@ button:hover {
   background-color: #155ab6;
 }
 
-/* To-do list */
+/* To-do list styles */
 #taskList {
   list-style: none;
   padding-left: 0;
@@ -114,7 +100,7 @@ button:hover {
 }
 
 #taskList li {
-  padding: 10px;
+  padding: 10px 15px;
   background: #f7f9fc;
   margin-bottom: 8px;
   border-radius: 10px;
@@ -131,7 +117,7 @@ button:hover {
   color: gray;
 }
 
-/* Links */
+/* Favorite links */
 section ul {
   padding-left: 20px;
 }
@@ -149,7 +135,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Mobile responsive */
+/* Responsive for mobile */
 @media screen and (max-width: 600px) {
   .container {
     padding: 20px;
@@ -162,5 +148,6 @@ a:hover {
 
   button {
     width: 100%;
+    margin-left: 0;
   }
 }
