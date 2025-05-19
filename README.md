@@ -56,7 +56,7 @@ To **publish online**, host it on **GitHub Pages**:
 ---
 
 
-    the original link *** https://rohit-yadav5.github.io/custom-homepage/ ***
+the original link *** https://rohit-yadav5.github.io/custom-homepage/ ***
 
 ## 📄 License
 
