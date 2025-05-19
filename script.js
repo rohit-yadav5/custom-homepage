@@ -18,7 +18,7 @@ updateTime();
 
 // Weather Info
 function fetchWeather(lat, lon) {
-  const apiKey = "ef1a1e2074ef647607342b916529d4e0"; // ← Your API key
+  const apiKey = "7a161c3e6c6026b07cb2fda228c9fd1f"; // ← Your API key
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
   fetch(url)
