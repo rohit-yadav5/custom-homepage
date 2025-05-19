@@ -16,42 +16,36 @@ function updateTime() {
 setInterval(updateTime, 1000);
 updateTime();
 
-// To-do list logic
-const taskInput = document.getElementById("taskInput");
-const taskList = document.getElementById("taskList");
+// Weather Info
+function fetchWeather(lat, lon) {
+  const apiKey = "ef1a1e2074ef647607342b916529d4e0"; // ← Your API key
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
-// Load saved tasks from localStorage
-function loadTasks() {
-  const saved = localStorage.getItem("tasks");
-  if (saved) {
-    JSON.parse(saved).forEach(task => addTask(task, false));
-  }
-}
-loadTasks();
-
-// Add task (with optional save)
-function addTask(taskText = null, save = true) {
-  const text = taskText || taskInput.value.trim();
-  if (text === "") return;
-
-  const li = document.createElement("li");
-  li.textContent = text;
-
-  // Click to delete
-  li.addEventListener("click", () => {
-    li.remove();
-    saveTasks(); // update localStorage after deletion
-  });
-
-  taskList.appendChild(li);
-  if (!taskText) taskInput.value = "";
-
-  if (save) saveTasks(); // only save if it's not being loaded
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const temp = data.main.temp.toFixed(1);
+      const city = data.name;
+      const desc = data.weather[0].description;
+      document.getElementById("weather").textContent =
+        `🌡️ ${temp}°C in ${city} – ${desc}`;
+    })
+    .catch(error => {
+      document.getElementById("weather").textContent = "Failed to load weather.";
+      console.error("Weather error:", error);
+    });
 }
 
-// Save current tasks to localStorage
-function saveTasks() {
-  const tasks = [];
-  taskList.querySelectorAll("li").forEach(li => tasks.push(li.textContent));
-  localStorage.setItem("tasks", JSON.stringify(tasks));
+// Get user's location
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      fetchWeather(position.coords.latitude, position.coords.longitude);
+    },
+    () => {
+      document.getElementById("weather").textContent = "Location access denied.";
+    }
+  );
+} else {
+  document.getElementById("weather").textContent = "Geolocation not supported.";
 }
