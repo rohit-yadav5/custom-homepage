@@ -18,12 +18,18 @@ updateTime();
 
 // Weather Info
 function fetchWeather(lat, lon) {
-  const apiKey = "7a161c3e6c6026b07cb2fda228c9fd1f"; // ← Your API key
+  const apiKey = "7a161c3e6c6026b07cb2fda228c9fd1f"; // ✅ Your new API key
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
   fetch(url)
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error ${response.status}`);
+      }
+      return response.json();
+    })
     .then(data => {
+      console.log("Weather data:", data); // 🔍 Debugging
       const temp = data.main.temp.toFixed(1);
       const city = data.name;
       const desc = data.weather[0].description;
