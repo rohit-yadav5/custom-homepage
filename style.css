@@ -1,4 +1,4 @@
-/* Basic Reset */
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,6 +24,7 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Greeting & Time */
 #greeting {
   font-size: 32px;
   font-weight: 600;
@@ -37,6 +38,7 @@ body {
   margin-bottom: 25px;
 }
 
+/* Section Titles */
 section h2 {
   display: flex;
   align-items: center;
@@ -50,7 +52,13 @@ section {
   margin-bottom: 30px;
 }
 
-/* Links */
+/* Weather Text */
+#weather {
+  font-size: 18px;
+  color: #444;
+}
+
+/* Favorite Links */
 section ul {
   list-style: none;
   padding-left: 0;
@@ -71,34 +79,4 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-/* Grid */
-.grid-board {
-  display: grid;
-  grid-template-columns: repeat(8, 1.5cm);
-  grid-template-rows: repeat(8, 1.5cm);
-  gap: 4px;
-  margin-top: 15px;
-}
-
-.grid-box {
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/* Hide grid */
-.grid-board.hidden {
-  display: none;
-}
-
-#toggleGrid {
-  margin-bottom: 10px;
-  padding: 8px 16px;
-  background-color: #1a73e8;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
 }
