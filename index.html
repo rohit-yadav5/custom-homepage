@@ -17,14 +17,16 @@
 <body>
   <!-- Header Bar -->
   <header class="header-bar">
-    <div class="weather-info">
-    <i class="fas fa-thermometer-half"></i> <span id="weather"><i class="fas fa-spinner fa-spin"></i> Loading...</span>
+    <div class="header-left">
+      <span id="header-time"></span>
+    </div>
+    <div class="header-right">
+      Gurgaon: <i class="fas fa-thermometer-half"></i> <span id="weather"><i class="fas fa-spinner fa-spin"></i> Loading...</span>
     </div>
   </header>
 
   <div class="container">
     <h1 id="greeting">Good Day, Rohit!</h1>
-    <p id="time"></p>
 
     <!-- Favorite Links -->
     <section>
@@ -51,5 +53,14 @@
 
   <!-- JavaScript -->
   <script src="script.js"></script>
+  <script>
+    // Update time in header
+    function updateHeaderTime() {
+      const now = new Date();
+      document.getElementById("header-time").textContent = now.toLocaleTimeString();
+    }
+    setInterval(updateHeaderTime, 1000);
+    updateHeaderTime();
+  </script>
 </body>
 </html>
