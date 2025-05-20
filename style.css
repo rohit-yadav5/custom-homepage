@@ -15,6 +15,24 @@ body {
   min-height: 100vh;
 }
 
+/* Header Bar */
+.header-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #1a73e8;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+/* Move the container down so it is not hidden behind fixed header */
 .container {
   background: #fff;
   max-width: 800px;
@@ -22,6 +40,7 @@ body {
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  margin-top: 60px; /* space for header */
 }
 
 /* Greeting & Time */
@@ -52,10 +71,10 @@ section {
   margin-bottom: 30px;
 }
 
-/* Weather Text */
+/* Weather Text (inside header, color white already) */
 #weather {
   font-size: 18px;
-  color: #444;
+  color: white;
 }
 
 /* Favorite Links */
