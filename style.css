@@ -39,7 +39,7 @@ body {
   margin-bottom: 25px;
 }
 
-/* Section titles with icons */
+/* Section titles */
 section h2 {
   display: flex;
   align-items: center;
@@ -53,44 +53,13 @@ section {
   margin-bottom: 30px;
 }
 
-/* Favorite links */
-section ul {
-  list-style: none;
-  padding-left: 0;
+/* Weather paragraph */
+#weather {
+  font-size: 18px;
+  color: #444;
 }
 
-section ul li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-a {
-  color: #1a73e8;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-/* Grid overlay */
-.grid {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  display: grid;
-  z-index: 9999;
-  background-image:
-    linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px);
-  background-size: 1cm 1cm;
-}
-
+/* Toggle Grid Button */
 #toggleGrid {
   margin-bottom: 20px;
   padding: 8px 16px;
@@ -103,4 +72,28 @@ a:hover {
 
 #toggleGrid:hover {
   background-color: #e0e0e0;
+}
+
+/* Grid overlay with labels */
+.grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1.5cm);
+  grid-auto-rows: 1.5cm;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.grid-cell {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: monospace;
 }
