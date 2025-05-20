@@ -34,7 +34,7 @@ async function getWeather() {
 }
 getWeather();
 
-// Grid (without labels)
+// Grid (no labels)
 function generateGrid() {
   const gridBoard = document.getElementById("gridBoard");
   gridBoard.innerHTML = "";
