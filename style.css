@@ -40,7 +40,7 @@ body {
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  margin-top: 98px; /* header height (60px) + ~1cm (38px) */
+  margin-top: 174px; /* header height (60px) + 3cm (114px) */
 }
 
 /* Greeting & Time */
