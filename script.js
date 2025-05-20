@@ -29,7 +29,7 @@ function fetchWeather() {
     .then(data => {
       const temp = data.main.temp.toFixed(2);
       const condition = data.weather[0].main;
-      const weatherText = `<i class="fas fa-thermometer-half"></i> ${temp}°C | ${condition}`;
+      const weatherText = `<i class="fas fa-map-marker-alt"></i> Gurgaon: ${temp}°C | ${condition}`;
       document.getElementById("weather").innerHTML = weatherText;
     })
     .catch(error => {
