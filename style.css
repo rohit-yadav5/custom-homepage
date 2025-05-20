@@ -23,11 +23,11 @@ body {
   width: 100%;
   background: #ffffff;
   color: #1a73e8;
-  padding: 10px 20px;
-  font-size: 18px;
+  padding: 16px 30px; /* increased padding for taller height */
+  font-size: 20px;     /* increased font size */
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   z-index: 1000;
 }
@@ -40,7 +40,7 @@ body {
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  margin-top: 174px; /* header height (60px) + 3cm (114px) */
+  margin-top: 130px; /* adjusted gap to match larger header */
 }
 
 /* Greeting & Time */
@@ -73,7 +73,7 @@ section {
 
 /* Weather Text (inside header) */
 #weather {
-  font-size: 18px;
+  font-size: 20px;
   color: #1a73e8;
 }
 
