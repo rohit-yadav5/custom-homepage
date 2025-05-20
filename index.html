@@ -15,21 +15,42 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header Bar -->
   <header class="header-bar">
-    <div id="weather"><i class="fas fa-spinner fa-spin"></i> Loading...</div>
+    <div class="weather-info">
+      Gurgaon: <i class="fas fa-thermometer-half"></i> <span id="weather"><i class="fas fa-spinner fa-spin"></i> Loading...</span>
+    </div>
   </header>
 
   <div class="container">
     <h1 id="greeting">Good Day, Rohit!</h1>
     <p id="time"></p>
 
+    <!-- Weather Section -->
+    <section>
+      <h2><i class="fas fa-cloud-sun"></i> Weather</h2>
+      <p id="weather"><i class="fas fa-spinner fa-spin"></i> Loading...</p>
+    </section>
+
     <!-- Favorite Links -->
     <section>
       <h2><i class="fas fa-star"></i> Favorite Links</h2>
       <ul>
-        <li><i class="fas fa-search"></i> <a href="https://google.com" target="_blank">Google</a></li>
-        <li><i class="fab fa-github"></i> <a href="https://github.com" target="_blank">GitHub</a></li>
-        <li><i class="fas fa-briefcase"></i> <a href="https://rohit-yadav5.github.io" target="_blank">My Portfolio</a></li>
+        <li><i class="fas fa-search"></i> <a href="https://s.amizone.net/Home" target="_blank">Amizone</a></li>
+        <li><i class="fab fa-apple"></i> <a href="https://www.icloud.com/" target="_blank">iCloud</a></li>
+        <li><i class="fas fa-cloud-upload-alt"></i> <a href="https://amityedu96491-my.sharepoint.com/personal/rohit_yadav16_s_amity_edu/_layouts/15/onedrive.aspx?view=1" target="_blank">Amity OneDrive</a></li>
+        <li><i class="fas fa-laptop-code"></i> <a href="https://academy.hackthebox.com/dashboard" target="_blank">Hack The Box Academy</a></li>
+        <li><i class="fas fa-cogs"></i> <a href="https://picoctf.org/" target="_blank">picoCTF</a></li>
+        <li><i class="fas fa-search"></i> <a href="https://www.google.co.in/?client=safari&channel=iphone_bm" target="_blank">Google India</a></li>
+        <li><i class="fas fa-language"></i> <a href="https://www.duolingo.com/learn" target="_blank">Duolingo</a></li>
+        <li><i class="fas fa-keyboard"></i> <a href="https://www.typingclub.com/sportal/#" target="_blank">TypingClub</a></li>
+        <li><i class="fab fa-github"></i> <a href="https://github.com/" target="_blank">GitHub</a></li>
+        <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a></li>
+        <li><i class="fas fa-volume-up"></i> <a href="https://ttsreader.com/player/" target="_blank">TTSReader</a></li>
+        <li><i class="fas fa-comments"></i> <a href="https://chat.openai.com/?model=text-davinci-002-render-sha" target="_blank">ChatGPT</a></li>
+        <li><i class="fas fa-robot"></i> <a href="https://claude.ai/new" target="_blank">Claude AI</a></li>
+        <li><i class="fas fa-brain"></i> <a href="https://bard.google.com/chat" target="_blank">Google Bard</a></li>
+        <li><i class="fas fa-gem"></i> <a href="https://gemini.google.com/app" target="_blank">Google Gemini</a></li>
       </ul>
     </section>
   </div>
