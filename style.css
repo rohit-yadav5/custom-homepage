@@ -21,8 +21,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: #1a73e8;
-  color: white;
+  background: #ffffff;
+  color: #1a73e8;
   padding: 10px 20px;
   font-size: 18px;
   display: flex;
@@ -40,7 +40,7 @@ body {
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  margin-top: 60px; /* space for header */
+  margin-top: 98px; /* header height (60px) + ~1cm (38px) */
 }
 
 /* Greeting & Time */
@@ -71,10 +71,10 @@ section {
   margin-bottom: 30px;
 }
 
-/* Weather Text (inside header, color white already) */
+/* Weather Text (inside header) */
 #weather {
   font-size: 18px;
-  color: white;
+  color: #1a73e8;
 }
 
 /* Favorite Links */
